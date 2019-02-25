@@ -10,7 +10,7 @@ class HolidaysController < ActionController::API
             },
             {
                 :action => 'input',
-                :eventUrl => ["http://d747a877.ngrok.io/date_type"]
+                :eventUrl => ["http://[YOUR NGROK URL]/date_type"]
             }
         ].to_json
     end
@@ -32,7 +32,7 @@ class HolidaysController < ActionController::API
                     :action => 'input',
                     :submitOnHash => true,
                     :maxDigits => 8,
-                    :eventUrl => ["http://d747a877.ngrok.io/country_choice"]
+                    :eventUrl => ["http://[YOUR NGROK URL]/country_choice"]
                 }
             ].to_json
         elsif dtmf == '2'
@@ -44,7 +44,7 @@ class HolidaysController < ActionController::API
                 },
                 {
                     :action => 'input',
-                    :eventUrl => ["http://d747a877.ngrok.io/holiday_output"]
+                    :eventUrl => ["http://[YOUR NGROK URL]/holiday_output"]
                 }
             ].to_json
         else
@@ -64,7 +64,7 @@ class HolidaysController < ActionController::API
             },
             {
                 :action => 'input',
-                :eventUrl => ["http://d747a877.ngrok.io/holiday_output?date=#{date}"]
+                :eventUrl => ["http://[YOUR NGROK URL]/holiday_output?date=#{date}"]
             }
         ].to_json
     end
