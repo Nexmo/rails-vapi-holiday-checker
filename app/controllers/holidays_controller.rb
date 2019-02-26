@@ -1,6 +1,8 @@
 require 'json'
 class HolidaysController < ActionController::API
 
+    BASE_URL = ""
+    
     def answer
         render json:
         [
@@ -10,7 +12,7 @@ class HolidaysController < ActionController::API
             },
             {
                 :action => 'input',
-                :eventUrl => ["http://[YOUR NGROK URL]/date_type"]
+                :eventUrl => ["#{BASE_URL}/date_type"]
             }
         ].to_json
     end
@@ -32,7 +34,7 @@ class HolidaysController < ActionController::API
                     :action => 'input',
                     :submitOnHash => true,
                     :maxDigits => 8,
-                    :eventUrl => ["http://[YOUR NGROK URL]/country_choice"]
+                    :eventUrl => ["#{BASE_URL}/country_choice"]
                 }
             ].to_json
         elsif dtmf == '2'
@@ -44,7 +46,7 @@ class HolidaysController < ActionController::API
                 },
                 {
                     :action => 'input',
-                    :eventUrl => ["http://[YOUR NGROK URL]/holiday_output"]
+                    :eventUrl => ["#{BASE_URL}/holiday_output"]
                 }
             ].to_json
         else
@@ -64,7 +66,7 @@ class HolidaysController < ActionController::API
             },
             {
                 :action => 'input',
-                :eventUrl => ["http://[YOUR NGROK URL]/holiday_output?date=#{date}"]
+                :eventUrl => ["#{BASE_URL}/holiday_output?date=#{date}"]
             }
         ].to_json
     end
