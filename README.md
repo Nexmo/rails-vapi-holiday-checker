@@ -13,7 +13,8 @@ This is a Rails application powered by Nexmo's Voice API that creates a phone se
 
 * Clone this repository
 * Provision a Nexmo virtual number from the Nexmo dashboard
-* Rename `.env.sample` to `.env` and insert your credentials in the file
+* Create a Nexmo application from the Nexmo dashboard
+* Link your virtual number to your application in the Nexmo dashboard
 * Start up the Rails server
 * Make your server externally accessible with ngrok
 
